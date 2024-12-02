@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- favicon-->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css"/>
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+    <!-- slick slider -->
+    <!-- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")-->
+    <!-- swiper slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- custom styles-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Tacel | Где купить</title>
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="container"> 
+        <nav class="header__nav"> <a class="header__logo" href="home.html"> <img src="img/logo.png" alt="/"/><span>Пищевой продукт <br/> для энтерального питания</span></a>
+          <ul class="header-menu">
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Где купить</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">О компании</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Врачам</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Полезные статьи</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Контакты</a></li>
+          </ul>
+          <div class="header__phones"><a class="header__phone" href="tel:+74952487181">+7 (495) 248-71-81  </a><a class="header__phone" href="tel:+79037928075">+7 (903) 792-80-75 </a></div>
+          <button class="header__burger js-menuToggle"> <span> </span><span> </span><span> </span></button>
+        </nav>
+      </div>
+    </header>
+        <nav class="breadcrumbs"> 
+          <div class="container">
+            <ul class="breadcrumbs__list"> 
+              <li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item">Где купить</li>
+            </ul>
+          </div>
+        </nav>
+    <main class="page shops"> 
+      <div class="container">
+        <h1 class="title">Где купить</h1>
+        <p>Смеси для энтерального питания можно приобрести в во всех крупных маркетплейсах и интернет магазинах. Если вы не нашли удобный для вас магазин или аптеку - напишите нам в службу поддержки, мы поможем найти продукт в вашем городе.</p>
+        <div class="shops__box"> 
+          <div class="adress"> 
+            <div class="adress__item js-adress" data-adress="adress-1">м. Фрунзенская, ул. Погодинская, д.1/1, <br> тел. 8(499) 248 7181 – аптека в фойе клиники </div>
+            <div class="adress__item js-adress" data-adress="adress-2">м. Беговая, ул. Беговая, д.11, тел. 8(495) 613 7543 – <br> магазин «Продукты 24»</div>
+            <div class="adress__item js-adress" data-adress="adress-3">м. Динамо, Ленинградский проспект, д. 33/4, <br> тел. 8(495) 945 9675 - магазин «Продукты 24» </div>
+            <div class="adress__item js-adress" data-adress="adress-4">м. Беговая, Хорошевское шоссе, д. 34, <br>  тел. 8(495) 941 5878 - магазин «Продукты 24»</div>
+            <div class="adress__item js-adress" data-adress="adress-5">м. Менделеевская, ул. Новослободская, дом 49/2, <br> тел. 8(499) 7912146 – аптека на первом этаже </div>
+            <div class="adress__item js-adress" data-adress="adress-6">м. Измайловская, ул. Первомайская, д.42, к.3, <br> тел. 8(495) 2520802 - аптека в маг. Пятерочка</div>
+            <div class="adress__item js-adress" data-adress="adress-7">м. Каширская, Каширское шоссе, д.23, <br> тел. 8(495) 9430470 - аптека в фойе</div>
+            <div class="adress__item js-adress" data-adress="adress-8">НМИЦ онкологии им. Н.Н. Блохина</div>
+          </div>
+          <div class="coordinates">
+            <div class="coordinates__map" id="adress-1"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="contacts"> 
+      <div class="contacts__map" id="map"></div>
+      <div class="container">
+        <div class="contacts__info"> 
+          <h6 class="section-title contacts__title">Как с нами <b>связаться</b></h6>
+          <div class="contacts__item"> <img class="contacts__icon" src="img/icon-marker.png" alt=""/><span class="contacts__val contacts__val--adress">115114, Москва, Павелецкая <br/> набережная, д. 2, стр. 2</span></div>
+          <div class="contacts__item"> <img class="contacts__icon" src="img/icon-phone.png" alt=""/><a class="contacts__val contacts__val--phone" href="+74951503073">+7 (495) 150-30-73 </a></div>
+          <div class="contacts__item"> <img class="contacts__icon" src="img/icon-mail.png" alt=""/><a class="contacts__val contacts__val--mail" href="mailto:tavel@gmail.com">tavel@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"> 
+      <div class="container">
+        <div class="footer__box">
+          <div class="footer__logo"> <img src="img/footer-logo.png" alt="/"/><span>Пищевой продукт <br/> для энтерального питания</span></div>
+          <div class="footer__links"> <a href="#">Пользавательское соглашение</a><a href="#">Политика конфиденциальности</a></div>
+          <div class="dev"> <span class="dev__text">Создание сайта</span><a class="dev__logo" href="https://scrum360.ru/"><img src="img/scrum-logo.png" alt="/"/></a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- inputmask -->
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
+    <!-- slick slider -->
+    <!-- script(src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")-->
+    <!-- swiper slider-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- yandex map-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <!-- scripts-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

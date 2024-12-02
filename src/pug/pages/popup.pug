@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Tacel | Модальные окна
+	body
+
+		include ./../sections/_header.pug
+
+		include ./../mixins/_breadcrumbs.pug
+		+breadcrumbs('Модальные окна')
+
+		main.page 
+			.container 
+				button.button.button-green(data-src="#modal-order" data-fancybox="modal-order") Форма заказа
+
+				br
+				br
+
+				button.button.button-green(data-src="#modal-thanks" data-fancybox="modal-thanks") Спасибо
+
+		#modal-order.modal-order(style="display:none") 
+			.modal-order__box
+				.modal-order__present 
+					h6.modal-order__name «Энмит» энтеральное питание
+					p Может применяться в качестве основного или дополнительного источника питания, особенно в после- операционный период, и позволит решить проблему приедаемости пищи и расширить ассортимент предлагаемых продуктов для энтерального питания
+					img.modal-order__img(src="img/modal-img.webp", alt="/")
+				form.modal-order__form.form(action="#")
+					h6.modal-order__title Форма заказа
+					p.modal-order__tagtitle Заполните форму ниже и мы свяжемся с вами #[b в ближайшее время]
+					.form__fields 
+						input.form__input(type="text" placeholder="Ваше имя")
+						input.form__input.js-maskPhone(type="text" placeholder="Ваш номер телефона")
+						input.form__input.js-maskEmail(type="text" placeholder="Ваш адрес")
+						button.form__button.button.button-green Заказать смесь
+					.agree
+						label.agree__wrap
+							input.agree__input(type="checkbox" checked autocomplete="off")
+							span.agree__checkbox
+							span.agree__text Нажимая на кнопку, вы соглашаетесь с #[br] #[a(href="") политикой конфиденциальности ]
+
+		#modal-thanks.modal-thanks(style="display:none")
+			.modal-thanks__box
+				img.modal-thanks__icon(src="img/icon-check.svg" alt="/")
+				h6.modal-thanks__title.title Спасибо!!! 
+				p.modal-thanks__text Ваш запрос обрабатывается, #[b мы перезвоним вам] в ближайшее время
+				button.modal-thanks__button.button.button-green Спасибо
+		
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

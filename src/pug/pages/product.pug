@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Tacel | Карточка товара
+	body
+
+		include ./../sections/_header.pug
+
+		include ./../mixins/_breadcrumbs.pug
+		+breadcrumbs('Продукт')
+
+		main.page.product-page 
+			.container
+				include ./../sections/_product.pug
+
+				.product__charact.tabs
+					.tabs__wrap
+						.tabs-headbox
+							img(src="img/icon-arrow-white.svg", alt="")
+						.tabs__buttons.d-grid 
+							each item in ['Описание','Инструкция','Состав','Документы и сертификаты']
+								button.tab= item
+					.tabs__contents 
+						each item in ['Специальная смесь с повышенной полезностью для энтерального питания (зондового и перорального использования) для взрослых и детей с 1 года, нуждающихся в нутритивной поддержке, при различных заболеваниях включая критические состояния, термические поражения, онкологические заболевания, заболевания органов желудочно-кишечного тракта, муковисцидоз, паллиативные состояния, а также для здоровых людей, которым необходим дополнительный источник питательных веществ (спортсмены, пожилые люди, специалисты вредных производств и т.п.).','Инструкция','Состав','Документы и сертификаты']
+							.tabs__content
+								p= item
+
+		include ./../sections/_advantages.pug 
+
+		include ./../sections/_auditories.pug 
+
+		include ./../sections/_contacts.pug
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Site | Templates
+	body
+		//- mixins
+		include ./../mixins/_articlePreview.pug
+		include ./../mixins/_breadcrumbs.pug
+		include ./../mixins/_mixin3.pug
+		include ./../mixins/_mixin4.pug
+		include ./../mixins/_mixin5.pug
+		// ======================================== HEADER
+		include ./../sections/_header.pug
+
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+		br
+
+		+breadcrumbs('О компании')
+				
+		.container
+
+									  
+			br
+			br
+
+			h1 Шаблоны
+			
+			br
+			br
+
+
+			br
+			br
+			
+			h1.title О компании
+
+			br
+			br
+
+			h2.section-title Преимущества готовых к употреблению #[b жидких смесей]
+
+			br
+			br
+
+			.button-box
+				button.button.button-green Купить смесь
+				dbutton.button.button-transparent Подробнее
+
+			br
+			br
+
+			ul.list 
+				each item in [1, 2, 3, 4, 5]
+					li.list__item Ненумерованный список
+
+			br
+			br
+
+			ol 
+				each item in [1, 2, 3, 4, 5]
+					li Нумерованный список
+
+			br
+			br
+			div(style="width:270px")
+				+articlePreview('info-slide-1.webp', 'Как оно работает и кто в нем нуждается')
+
+			br
+			br
+
+
+		// ======================================== FOOTER
+		include ./../sections/_footer.pug
+		// ======================================== SCRIPTS
+		include ./../sections/_scripts.pug

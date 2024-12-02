@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Tacel | Главная
+	body
+		
+		// ======================================== HEADER
+		include ./../sections/_header.pug
+
+		-
+			const homeAdvantages = [
+				{icon: 'icon-advantages-1.svg', text: '<b>Низкий риск</b> контаминации'},
+				{icon: 'icon-advantages-2.svg', text: '<b>Не содержит</b> лактозу'},
+				{icon: 'icon-advantages-3.svg', text: 'Практичная и <b>удобная упаковка</b>'},
+				{icon: 'icon-advantages-4.svg', text: '<b>Прост в</b> употреблении'}
+			]
+			
+		section.home
+			.container
+				.home__box
+					.home__content 
+						h1.title.home__title Новый продукт на основе мяса для #[br] энтерального питания- жидкая, #[br] готовая к употреблению, смесь
+						p.home__text Полученный от здоровых животных, которые были выращены без #[br] использования стимуляторов роста, гормональных препаратов и других #[br] нетрадиционных кормовых добавок
+						.button-box.home__buttons
+							button.button.button-green Купить смесь
+							button.button.button-transparent Скачать презентацию
+					img.home__img(src="img/home-img.webp", alt="")
+
+				.home-advantages.d-grid 
+					each item in homeAdvantages
+						article.home-advantages__item 
+							img.home-advantages__icon(src="img/"+ item.icon, alt="/")
+							span.home-advantages__text !{item.text}
+
+		section.products
+			.container
+				.products__slider.swiper
+					.swiper-wrapper
+						each item in [1, 2, 3, 4, 5]
+							.swiper-slide
+								include ./../sections/_product.pug
+					ul.swiper-pagination
+
+		include ./../sections/_advantages.pug 
+
+		include ./../sections/_auditories.pug 
+
+
+		include ./../mixins/_articlePreview.pug
+		-
+			const slides = [
+				{img: 'info-slide-1.webp', text: 'Как оно работает и кто в нем нуждается'},
+				{img: 'info-slide-2.webp', text: 'Преимущества энтерального питания'},
+				{img: 'info-slide-3.webp', text: 'Подобраем правильный рацион для энтерального питания'},
+				{img: 'info-slide-4.webp', text: 'Часто задаваемые вопросы о энтеральном питании'},
+				{img: 'info-slide-1.webp', text: 'Как оно работает и кто в нем нуждается'}
+			]
+
+		section.info
+			.container 
+				h4.info__title.section-title #[b Полезная] информация о продукте
+				.slider-box
+					.swiper.info-slider 
+						.swiper-wrapper 
+							each item in slides 
+								.swiper-slide
+									+articlePreview(item.img, item.text)
+					.slider-nav 
+						button.slider-nav__prev
+							img(src="img/prev.png", alt="/")
+						button.slider-nav__next
+							img(src="img/next.png", alt="/")
+
+				a.button.button-green.info__more Смотреть больше статей
+
+		// ======================================== FOOTER
+		include ./../sections/_footer.pug
+		// ======================================== SCRIPTS
+		include ./../sections/_scripts.pug

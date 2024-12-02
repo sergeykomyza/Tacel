@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- favicon-->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css"/>
+    <!-- fancybox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/>
+    <!-- slick slider -->
+    <!-- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")-->
+    <!-- swiper slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- custom styles-->
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Tacel | Модальные окна</title>
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="container"> 
+        <nav class="header__nav"> <a class="header__logo" href="home.html"> <img src="img/logo.png" alt="/"/><span>Пищевой продукт <br/> для энтерального питания</span></a>
+          <ul class="header-menu">
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Где купить</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">О компании</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Врачам</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Полезные статьи</a></li>
+            <li class="header-menu__item"> <a class="header-menu__link" href="#">Контакты</a></li>
+          </ul>
+          <div class="header__phones"><a class="header__phone" href="tel:+74952487181">+7 (495) 248-71-81  </a><a class="header__phone" href="tel:+79037928075">+7 (903) 792-80-75 </a></div>
+          <button class="header__burger js-menuToggle"> <span> </span><span> </span><span> </span></button>
+        </nav>
+      </div>
+    </header>
+        <nav class="breadcrumbs"> 
+          <div class="container">
+            <ul class="breadcrumbs__list"> 
+              <li class="breadcrumbs__item"> <a class="breadcrumbs__link" href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item">Модальные окна</li>
+            </ul>
+          </div>
+        </nav>
+    <main class="page"> 
+      <div class="container"> 
+        <button class="button button-green" data-src="#modal-order" data-fancybox="modal-order">Форма заказа</button><br/><br/>
+        <button class="button button-green" data-src="#modal-thanks" data-fancybox="modal-thanks">Спасибо</button>
+      </div>
+    </main>
+    <div class="modal-order" id="modal-order" style="display:none"> 
+      <div class="modal-order__box">
+        <div class="modal-order__present"> 
+          <h6 class="modal-order__name">«Энмит» энтеральное питание</h6>
+          <p>Может применяться в качестве основного или дополнительного источника питания, особенно в после- операционный период, и позволит решить проблему приедаемости пищи и расширить ассортимент предлагаемых продуктов для энтерального питания</p><img class="modal-order__img" src="img/modal-img.webp" alt="/"/>
+        </div>
+        <form class="modal-order__form form" action="#">
+          <h6 class="modal-order__title">Форма заказа</h6>
+          <p class="modal-order__tagtitle">Заполните форму ниже и мы свяжемся с вами <b>в ближайшее время</b></p>
+          <div class="form__fields"> 
+            <input class="form__input" type="text" placeholder="Ваше имя"/>
+            <input class="form__input js-maskPhone" type="text" placeholder="Ваш номер телефона"/>
+            <input class="form__input js-maskEmail" type="text" placeholder="Ваш адрес"/>
+            <button class="form__button button button-green">Заказать смесь</button>
+          </div>
+          <div class="agree">
+            <label class="agree__wrap">
+              <input class="agree__input" type="checkbox" checked="checked" autocomplete="off"/><span class="agree__checkbox"></span><span class="agree__text">Нажимая на кнопку, вы соглашаетесь с <br/> <a href="">политикой конфиденциальности </a></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-thanks" id="modal-thanks" style="display:none">
+      <div class="modal-thanks__box"><img class="modal-thanks__icon" src="img/icon-check.svg" alt="/"/>
+        <h6 class="modal-thanks__title title">Спасибо!!! </h6>
+        <p class="modal-thanks__text">Ваш запрос обрабатывается, <b>мы перезвоним вам</b> в ближайшее время</p>
+        <button class="modal-thanks__button button button-green">Спасибо</button>
+      </div>
+    </div>
+    <footer class="footer"> 
+      <div class="container">
+        <div class="footer__box">
+          <div class="footer__logo"> <img src="img/footer-logo.png" alt="/"/><span>Пищевой продукт <br/> для энтерального питания</span></div>
+          <div class="footer__links"> <a href="#">Пользавательское соглашение</a><a href="#">Политика конфиденциальности</a></div>
+          <div class="dev"> <span class="dev__text">Создание сайта</span><a class="dev__logo" href="https://scrum360.ru/"><img src="img/scrum-logo.png" alt="/"/></a></div>
+        </div>
+      </div>
+    </footer>
+    <!-- jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- inputmask -->
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
+    <!-- slick slider -->
+    <!-- script(src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")-->
+    <!-- swiper slider-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- yandex map-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <!-- scripts-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

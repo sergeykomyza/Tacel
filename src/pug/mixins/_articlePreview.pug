@@ -1,0 +1,7 @@
+mixin articlePreview(img, text)
+	a(href="") 
+		article.article-preview 
+			figure.article-preview__img 
+				img(src="img/" + img, alt="/")
+				figcaption.article-preview__name= text
+			time.article-preview__date(datetime="2023-07-04") 07.04.23

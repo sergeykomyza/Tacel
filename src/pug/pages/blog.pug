@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Tacel | Блог
+	body
+
+		include ./../sections/_header.pug
+
+		include ./../mixins/_breadcrumbs.pug
+		+breadcrumbs('Блог')
+		
+		include ./../mixins/_articlePreview.pug
+		-
+			const previews = [
+				{img: 'info-slide-1.webp', text: 'Как оно работает и кто в нем нуждается'},
+				{img: 'info-slide-2.webp', text: 'Преимущества энтерального питания'},
+				{img: 'info-slide-3.webp', text: 'Подобраем правильный рацион для энтерального питания'},
+				{img: 'info-slide-4.webp', text: 'Часто задаваемые вопросы о энтеральном питании'},
+				{img: 'info-slide-1.webp', text: 'Как оно работает и кто в нем нуждается'},
+				{img: 'info-slide-2.webp', text: 'Преимущества энтерального питания'},
+				{img: 'info-slide-3.webp', text: 'Подобраем правильный рацион для энтерального питания'},
+				{img: 'info-slide-4.webp', text: 'Часто задаваемые вопросы о энтеральном питании'},
+				{img: 'info-slide-1.webp', text: 'Как оно работает и кто в нем нуждается'},
+				{img: 'info-slide-2.webp', text: 'Преимущества энтерального питания'},
+				{img: 'info-slide-3.webp', text: 'Подобраем правильный рацион для энтерального питания'},
+				{img: 'info-slide-4.webp', text: 'Часто задаваемые вопросы о энтеральном питании'}
+			]
+
+		main.page.blog 
+			.container
+				h1.title.blog__title Полезные статьи
+				.blog__box.d-grid 
+					each item in previews 
+						+articlePreview(item.img, item.text)
+
+		include ./../sections/_contacts.pug
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

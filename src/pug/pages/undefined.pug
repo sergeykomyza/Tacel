@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Tacel | Страницы не существует
+	body
+
+		include ./../sections/_header.pug
+
+		include ./../mixins/_breadcrumbs.pug
+		+breadcrumbs('404')
+
+		main.undefined 
+			.container 
+				.undefined__box
+					img.undefined__img(src="img/undefined-img.webp", alt="#")
+					.undefined__content 
+						h1.undefined__title Похоже такой страницы #[br] #[b не существует]
+						a.button.button-green(href="home.html") Вернуться на главную
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

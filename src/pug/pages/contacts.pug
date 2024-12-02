@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Tacel | Контакты
+	body
+
+		include ./../sections/_header.pug
+
+		include ./../mixins/_breadcrumbs.pug
+		+breadcrumbs('Контакты')
+
+		main.contacts-page
+			.contacts-page__datas 
+				h1.contacts-page__title.title Контакты
+				.contacts-page__item 
+					span.contacts-page__name Телефон
+					a.contacts-page__phone(href="tel:+74951503073") +7 (495) 150-30-73
+				.contacts-page__item 
+					span.contacts-page__name Адрес
+					span.contacts-page__adress 115114, Москва, Павелецкая #[br] набережная, д. 2, стр. 2
+				.contacts-page__item 
+					span.contacts-page__name Почта
+					a.contacts-page__mail(href="mailto:tavel@gmail.com") tavel@gmail.com
+			#contacts-map.contacts-page__map
+
+
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

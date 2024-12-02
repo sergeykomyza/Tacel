@@ -1,0 +1,21 @@
+-
+	const advantages = [
+		{icon: 'icon-advantages-5.png',  text: '<b>Низкая вязкость</b> <br> и хорошая текучесть'},
+		{icon: 'icon-advantages-6.png',  text: '<b>Строго стандартизированный </b> <br> состав и осмолярность '},
+		{icon: 'icon-advantages-7.png',  text: 'Низкий риск<b> <br> контаминации</b>  '},
+		{icon: 'icon-advantages-8.png',  text: 'Возможность<b> долговременного </b> <br> применения '},
+		{icon: 'icon-advantages-9.png',  text: '<b>Более хорошая </b> <br> усвояемость '},
+		{icon: 'icon-advantages-10.png', text: 'Меньшие трудозатраты и<b> <br> экономия времени </b> персонала '},
+		{icon: 'icon-advantages-11.png', text: '<b>Высокое содержание </b> <br> энергии в малом объеме '},
+		{icon: 'icon-advantages-12.png', text: 'Пригоден для пациентов с<b> <br> целиакией</b>  '} 
+	]
+
+.advantages 
+	.container 
+		h2.section-title.advantages__title Преимущества готовых к употреблению #[b жидких смесей]
+		.advantages__box 
+			each item, i in advantages 
+				article.advantage 
+					img.advantage__icon(src="img/"+ item.icon, alt="icon")
+					.advantage__num= `0${i+1}`
+					p.advantage__text !{item.text}
