@@ -1,2 +1,2 @@
 Pages
-https://sergeykomyza.github.io/Tacel/build/
+https://sergeykomyza.github.io/Tacel/build/home.html
