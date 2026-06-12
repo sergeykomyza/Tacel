@@ -23,8 +23,8 @@ html(lang="ru")
 						h1.title.home__title Новый продукт на основе мяса для #[br] энтерального питания- жидкая, #[br] готовая к употреблению, смесь
 						p.home__text Полученный от здоровых животных, которые были выращены без #[br] использования стимуляторов роста, гормональных препаратов и других #[br] нетрадиционных кормовых добавок
 						.button-box.home__buttons
-							button.button.button-green Купить смесь
-							button.button.button-transparent Скачать презентацию
+							button.button.button-green(data-src="#modal-order" data-fancybox="") Купить смесь
+							a.button.button-transparent(href="#" download) Скачать презентацию
 					img.home__img(src="img/home-img.webp", alt="")
 
 				.home-advantages.d-grid 
@@ -72,7 +72,7 @@ html(lang="ru")
 						button.slider-nav__next
 							img(src="img/next.png", alt="/")
 
-				a.button.button-green.info__more Смотреть больше статей
+				a.button.button-green.info__more(href="blog.html") Смотреть больше статей
 
 		// ======================================== FOOTER
 		include ./../sections/_footer.pug

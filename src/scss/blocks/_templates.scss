@@ -55,6 +55,9 @@
 	&:hover{
 		box-shadow: 0px 4px 50px rgba(50, 86, 52, 0.4);
 	}
+	@media(width <= 565px){
+		width: 100%;
+	}
 }
 
 .breadcrumbs{  

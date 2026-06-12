@@ -158,7 +158,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
         }
     }
         
-    header.addEventListener('click', (e) => {
+    header?.addEventListener('click', (e) => {
         e.preventDefault();
         const target = e.target;
         if( target &&
@@ -180,32 +180,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
 
 
 // ================================================== МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
-$(document).ready(function () {
-    $(".js-maskPhone").inputmask({
-        mask: "+7 999 999 99 99",
-        clearIncomplete: true
-    });
-    $('.js-maskEmail').inputmask({
-        mask: "*{1,20}[.*{1,20}]@*{1,20}.*{2,4}",
-        clearIncomplete: true
-    //     greedy: false,
-    //     onBeforePaste: function (pastedValue, opts) {
-    //         pastedValue = pastedValue.toLowerCase();
-    //         return pastedValue.replace("mailto:", "");
-    //     },
-    //     definitions: {
-    //         '*': {
-    //             validator: "[0-9A-Za-z-а-я-]",
-    //             casing: "lower"
-    //         }
-    //     }
-    });
-    $(".js-maskDate").inputmask({
-        mask: "99/99/9999",
-        clearIncomplete: true,
-        'placeholder': 'dd/mm/yyyy'
-    });
-});
+
 
 // ================================================== СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const swiper = new Swiper('.products__slider', {
@@ -248,7 +223,9 @@ const swiper1 = new Swiper('.info-slider', {
 // ================================================== 
 burger()
 tabsAdress()
-tabs('.tabs__buttons', '.tab', '.tabs__content ', 'active')
+if(document.querySelector('.tabs__buttons')){
+    tabs('.tabs__buttons', '.tab', '.tabs__content ', 'active')
+}
 // ================================================== 
 
 // ymaps.ready(init);

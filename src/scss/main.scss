@@ -26,7 +26,7 @@ html{
 body{
 	display: flex;
 	flex-direction: column;
-	// height: 100%;
+	min-height: 100vh;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	font-size: 14px;
@@ -711,6 +711,7 @@ section{
 
 .contacts-page{
 	display: flex;
+	margin-top: auto;
 	@media(max-width: 768px){
 		flex-direction: column;
 	}
@@ -921,9 +922,9 @@ section{
 	fill: #FFF;
 }
 
-.fancybox-active{
-	height: 100% !important;
-}
+// .fancybox-active{
+// 	height: 100% !important;
+// }
 
 .form{
 	&__input{
